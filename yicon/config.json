@@ -1,0 +1,34 @@
+{
+  "log": {
+    "appenders": [
+      {
+        "category": "normal",
+        "type": "dateFile",
+        "filename": "/yicon/logs/log",
+        "alwaysIncludePattern": true,
+        "pattern": "-yyyy-MM-dd.log"
+      }
+    ]
+  },
+  "model": {
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": "123456",
+    "port": "3306",
+    "database": "iconfont",
+    "dialect": "mysql"
+  },
+  "login": {
+    "ssoType": "ldap",
+    "adminList": [
+      "admin"
+    ]
+  },
+  "source": {
+    "support": false,
+    "infoUrl": "",
+    "versionUrl": "",
+    "sourceUrl": "",
+    "cdn": ""
+  }
+}

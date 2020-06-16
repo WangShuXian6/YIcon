@@ -1,0 +1,31 @@
+version: '3'
+services:
+  yicon:
+    #hostname: yicon
+    container_name: yicon
+    image: registry.cn-qingdao.aliyuncs.com/ymfe/yicon:latest
+    restart: always
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    #command: '--quiet --bind_ip_all --port 27017 --replSet rs0'
+    volumes:
+      - ./yicon:/yicon
+    #environment:
+      #MONGO_INITDB_ROOT_USERNAME: root
+      #MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - default
+      #- nginx-proxy
+    deploy:
+      resources:
+        limits:
+          cpus: '0.10'
+          memory: 300M
+
+  
+
+# networks:
+#   nginx-proxy:
+#     external: true
